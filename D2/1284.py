@@ -10,8 +10,9 @@ for test_case in range(1, T+1):
     R = input_list[2]
     S = input_list[3]
     W = input_list[4]
+
     a_water = P * W
-    b_water = Q if W < R else Q + S * (W - R)
+    b_water = Q if W <= R else Q + S * (W - R)
 
     print("#" + str(test_case), end=" ")
-    print(a_water if a_water > b_water else b_water)
+    print(a_water if a_water < b_water else b_water)
